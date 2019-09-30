@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    color: #eee;
+    padding: 2em;
+    font-family: sans-serif;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+.form-item > * {
+    /* align-self makes the element to only take as much space as their content is */
+    align-self: flex-start;
+}
+
+.form-label {
+    font-weight: 600;
+    padding: .5em;
+}
+
+.form-input {
+    /* removes the default CSS styles of safari and iOS browsers */
+    -webkit-appearance: none;
+    width: 100%;
+    max-width: 30rem;
+    /* Fix for Safari/iOS date fields */
+    min-height: calc(0.9rem + (0.8rem * 2) + 0.6rem);
+    padding: .6em;
+    font-size: .9rem;
+    outline: none;
+    border: 2px solid cornflowerblue;
+    border-radius: 4px;
+    background: #bbb;
+    transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+    .form-input::placeholder {
+        color: #000;
+    }
+
+.form-input:focus {
+    background: #aaa;
+}
+
+.form-input-error {
+    color: crimson;
+    background: #ccc;
+    border-color: crimson;
+}
+    .form-input-error::placeholder {
+        color: crimson;
+    }
+
+.form-error {
+    padding-top: .5em;
+    color: crimson;
+    font-size: 0.9em;
+    visibility: hidden;
+}
+    .form-input-error + .form-error {
+        visibility: visible;
+    }
+
+.form-input-small {
+    max-width: 15rem;
+}
+
+textarea.form-input {
+    resize: none;
+    min-height: 10rem;
+  }
+  
+.form-btn {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: .5em 1em;
+    margin: .5em 0;
+    color: #000;
+    background: cornflowerblue;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+  
+.form-btn:active {
+    background: royalblue;
+}
+
+input[type=date] {
+    font-size: 1.3rem;
+}

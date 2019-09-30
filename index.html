@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Input types</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Form Input types</h1>
+    <h5>Input types with all the needed attributes for input/form to work properly</h5>
+    <hr>
+
+    <form class="form">
+        <div class="form-item">
+            <!-- labels give breaf description of what the form should contain -->
+            <label for="names" class="form-label">Text type input</label>
+            <!-- placeholder gives more detailed description of what user needs to do -->
+            <input type="text" class="form-input" name="names" id="names" placeholder="Enter your given name(s)">
+            <span class="form-error">A sample error message</span>
+        </div>
+
+        <div class="form-item">
+            <label for="numusers" class="form-label">Number type input</label>
+            <input type="number" class="form-input form-input form-input-small" name="numusers" id="numusers" min="1" max="5" placeholder="How many users? (Max. 5)">
+            <span class="form-error">A sample error message</span>
+        </div>
+
+        <div class="form-item">
+            <label for="expirydate" class="form-label">Date type input</label>
+            <input type="date" class="form-input form-input-small" name="expirydate" id="expirydate" placeholder="Enter an expiration date">
+            <span class="form-error">A sample error message</span>
+        </div>
+
+        <div class="form-item">
+            <label for="message" class="form-label">Text area</label>
+            <textarea maxlength="500" class="form-input" name="message" id="message" placeholder="Enter a detailed message about why you wish to signup. (Max. 500 chars)"></textarea>
+            <span class="form-error">A sample error message</span>
+        </div>
+
+        <div class="form-item">
+            <button class="form-btn" type="submit">Sign Up</button>
+        </div>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
